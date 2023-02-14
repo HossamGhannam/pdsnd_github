@@ -19,7 +19,7 @@ def get_filters():
     city = None
     city = input("Please enter one of the following city (Chicago, New York City or Washington): \n").lower()
     #validating the user entry
-    while city not in ['chicago', 'new york city', 'washington']:
+    while city.lower() not in ['chicago', 'new york city', 'washington']:
         print('Sorry, you entered a city that does not exists! Please try again \n')
         city = input("Please enter one of the following city (Chicago, New York City or Washington), again: \n").lower()
 
@@ -199,9 +199,9 @@ def main():
             pd.set_option('display.max_columns',200)
             print(df.iloc[DisplayCounter : DisplayCounter + 5])
             DisplayCounter = DisplayCounter + 5
-            DisplayData = input('\nWould you like to see more data? Enter yes or no\n')
+            DisplayData = input('\nWould you like to see more data? Enter yes or no Please\n')
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to restart? Enter yes or no Please.\n')
         if restart.lower() != 'yes':
             break
 
